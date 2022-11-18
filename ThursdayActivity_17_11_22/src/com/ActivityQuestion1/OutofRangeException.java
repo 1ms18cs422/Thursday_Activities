@@ -1,6 +1,6 @@
 package com.ActivityQuestion1;
 
-public class OutofRangeException throws Exception {
+public class OutofRangeException extends Exception {
 
 
 
@@ -9,7 +9,7 @@ public class OutofRangeException throws Exception {
 
 
 public OutofRangeException(String s) {
-	super();
+	super(s);
 
 }
 }
