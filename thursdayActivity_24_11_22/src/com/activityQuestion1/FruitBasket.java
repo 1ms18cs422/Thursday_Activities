@@ -27,6 +27,9 @@ public class FruitBasket {
 		}
 		fruits.remove(0);//to remove particular element by index
 		fruits.removeAll(fruits1);//to remove all elements in fruits1
+	        Collections.replaceAll(fruits1,"watermelon","cherry");
+		
+		System.out.println(fruits1);
 		
 		System.out.println(fruits);
 		
