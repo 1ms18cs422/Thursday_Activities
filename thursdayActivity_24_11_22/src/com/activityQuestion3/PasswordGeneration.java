@@ -10,7 +10,7 @@ public class PasswordGeneration {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter your Password");
 		String Password=sc.next();
-		String regex = "A-Z//a-z0-9@*#]";
+		String regex = "[A-Za-z#@*]{8}";
 		Pattern p= Pattern.compile(regex);
 		Matcher m= p.matcher(Password);
 		boolean matchFound=m.find();
