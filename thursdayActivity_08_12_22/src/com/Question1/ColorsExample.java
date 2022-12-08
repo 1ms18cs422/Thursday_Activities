@@ -5,8 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
 
-//import com.collectionExamples.Student;
-//import com.collectionExamples.StudentNameComparator;
+
 
 public class ColorsExample {
 
@@ -36,14 +35,9 @@ public class ColorsExample {
 			System.out.println(itr1.next());
 		}
 		//Comparing two sets
+		boolean b = color.equals(color1);
+		System.out.println("Both sets are equal?" + b);
 		
-		
-		/*Collections.(color,new ColorComparator());
-		for(Color c:color)
-		{
-			System.out.println(c.getColorName()+" ");
-		}*/
-		//
 		//Getting the first and last elements in a tree set
 		System.out.println("First element in the Set:"+color.pollFirst());
 		System.out.println("Last element in the Set:"+color.pollLast());
