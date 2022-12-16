@@ -18,7 +18,7 @@ class TestFibonacciSeries {
 	{
 		//int expected=-1;
 		//int actual=fibonacci.fibonacciSeries(-1);
-		assertEquals(-1,fibonacci.fibonacciSeries(-1));
+		assertEquals(0,fibonacci.fibonacciSeries(-1));
 	}
 	@Test()
 	void testWithZeroInput()
@@ -39,7 +39,7 @@ class TestFibonacciSeries {
 	{
 		//int expected=8;
 		//int actual=fibonacci.fibonacciSeries(4);
-		assertEquals(5,fibonacci.fibonacciSeries(4));
+		assertEquals(8,fibonacci.fibonacciSeries(6));
 	}
 
 }
