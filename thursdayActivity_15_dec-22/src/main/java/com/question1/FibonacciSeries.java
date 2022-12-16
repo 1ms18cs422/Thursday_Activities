@@ -2,17 +2,17 @@ package com.question1;
 
 public class FibonacciSeries {
 	int fibonacciSeries(int number) {
-		int num1=0;
-		int num2=1;
-                Int result=0;
-		
-		for(int i=2;i<=number;i++) {
-			num1=num2;
-			num2=result;
-			result=num1+num2;
+		if(number<=0) {
+			return 0;
 		}
-			
-		return result;
+		else if(number==1)
+		{
+			return 1;
+		}
+		else
+		{
+			return fibonacciSeries(number-1)+fibonacciSeries(number-2);
+		}
 	}
 
 }
