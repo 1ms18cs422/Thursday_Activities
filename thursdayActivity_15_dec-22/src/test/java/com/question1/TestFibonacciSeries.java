@@ -18,28 +18,28 @@ class TestFibonacciSeries {
 	{
 		//int expected=-1;
 		//int actual=fibonacci.fibonacciSeries(-1);
-		assertEquals(-1,-1);
+		assertEquals(-1,fibonacci.fibonacciSeries(-1));
 	}
 	@Test()
 	void testWithZeroInput()
 	{
 		//int expected=0;
 		//int actual=fibonacci.fibonacciSeries(0);
-		assertEquals(0,0);
+		assertEquals(0,fibonacci.fibonacciSeries(0));
 	}
 	@Test()
 	void testWithOneInput()
 	{
 		//int expected=1;
 		//int actual=fibonacci.fibonacciSeries(1);
-		assertEquals(1,1);
+		assertEquals(1,fibonacci.fibonacciSeries(1));
 	}
 	@Test()
 	void testWithFinonacciSeries()
 	{
 		//int expected=8;
 		//int actual=fibonacci.fibonacciSeries(4);
-		assertEquals(5,5);
+		assertEquals(5,fibonacci.fibonacciSeries(4));
 	}
 
 }
