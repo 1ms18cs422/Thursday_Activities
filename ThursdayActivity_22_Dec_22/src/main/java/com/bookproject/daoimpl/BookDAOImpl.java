@@ -16,7 +16,7 @@ public class BookDAOImpl implements BookDAO{
 	{
 		try
 		{
-			DBConfig.makeConnection();
+			con=DBConfig.makeConnection();
 		}
 		catch(SQLException e) {
 			System.out.println(e);
@@ -109,14 +109,18 @@ public class BookDAOImpl implements BookDAO{
 	//To show list of books by price
 	public void listOfBooksByPrice() 
 	{
+		Book b=new Book();
 		try 
 		{
-			PreparedStatement ps=con.prepareStatement("select book_name,price from book where price=450");
-			ResultSet rs=ps.executeQuery();
+			Statement ps=con.createStatement();
+			//ps.executeQuery("select book_name from book where price>=350");
+			
+		//	ps.setInt(1,b.getBookPrice());
+			ResultSet rs=ps.executeQuery("select book_id,book_name from book where price>=350");
 			System.out.println("list of books by price are :");
 			while(rs.next())
 			{
-				System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getString(4)+" "+rs.getInt(5)+" "+rs.getString(6));
+				System.out.println(rs.getInt(1)+" "+rs.getString(2));
 				
 			}
 		}
