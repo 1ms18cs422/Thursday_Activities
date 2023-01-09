@@ -13,16 +13,27 @@ public class StudentMain {
 		session.beginTransaction();
 		
 		//Illustrating insertion
-		Student s=new Student();
-		s.setRoll_no(200);
-		s.setName("maunika");
-		s.setMarks(99.90);
-		session.save(s);
+		Student sobj=new Student();
+		sobj.setRoll_no(200);
+		sobj.setName("maunika");
+		sobj.setMarks(99.90);
+		
+		Student s1obj=new Student();
+		s1obj.setRoll_no(500);
+		s1obj.setName("sumaiya");
+		s1obj.setMarks(78.90);
+		session.save(sobj);
 		session.getTransaction().commit();
+		System.out.println("inserted successfully");
 		
 		//Illustrating Select
-		Student s1=session.get(Student.class, 1);
-		System.out.println(s1.getName());
+	
+		/*session.beginTransaction();
+		Student sobj=session.get(Student.class,1);
+		System.out.println(sobj.getName());
+		Student sobj1=session.get(Student.class,1);
+		
+		System.out.println(sobj1.getName());*/
 		
 		//Illustrating delete
 		session.beginTransaction();
@@ -36,7 +47,7 @@ public class StudentMain {
 		session.beginTransaction();
 		Student s3=session.get(Student.class, 1);
 		if(s3!=null) {
-					s3.setName(null);
+					s3.setName("saaniya");
 					s3.setMarks(99.80);
 					session.saveOrUpdate(s3);
 					session.getTransaction().commit();
